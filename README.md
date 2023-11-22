@@ -8,11 +8,11 @@ The API GET / returns the last sent item via POST. The POST / saves the content 
 GET/
 
 ```
-Any []
+Any 
 ```
 POST/
 
 ```
 
-Any []
+Any 
 ```
