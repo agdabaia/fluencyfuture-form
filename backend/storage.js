@@ -6,7 +6,7 @@ module.exports = {
   read() {
     try {
       const json = fs.readFileSync(dbfile, { encoding: 'utf-8' });
-      return JSON.parse(json);
+      return json;
     } catch(error) {
       console.error('Error while loading db.json', error);
       return [];
@@ -15,7 +15,7 @@ module.exports = {
 
   save(data) {
     try {
-      const json = fs.writeFileSync(dbfile, JSON.stringify(data), { encoding: 'utf-8' });
+      fs.writeFileSync(dbfile, data.toString(), { encoding: 'utf-8' });
       return true;
     } catch(error) {
       console.error('Error while saving db.json', error);
